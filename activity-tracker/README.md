@@ -11,8 +11,8 @@ This is a Node.js + Express API for tracking user activities with MongoDB.
 ## 🛠️ Installation & Setup
 ### **1. Clone the Repository**
 ```sh
-git clone <repo-url>
-cd <project-folder>
+git clone https://github.com/Shubham186536/activityTracker.git
+cd activity-tracker
 ```
 
 ### **2. Install Dependencies**
