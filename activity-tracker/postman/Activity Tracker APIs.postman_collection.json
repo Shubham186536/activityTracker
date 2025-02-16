@@ -1,0 +1,217 @@
+{
+	"info": {
+		"_postman_id": "0d753d92-e12f-45c2-88a1-6adaa13c6adb",
+		"name": "Activity Tracker APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30051336"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/api/auth/register",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"shubham@ril.com\",\r\n    \"password\": \"shubham123\",\r\n    \"name\": \"Shubham Singh\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/auth/login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"shubham@ril.com\",\r\n    \"password\": \"shubham123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/activities",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2IxOWY0NTA5ZTQ5ZDgwNDlhNzY4NzEiLCJpYXQiOjE3Mzk2OTM5MTksImV4cCI6MTczOTc4MDMxOX0.pnxYqJCS5vuGpj7lEquXJdm8q4RsNZM16hWR_d3TbaA"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Go to Gym\",\n    \"description\": \"1-hour strength training\",\n    \"dayNumber\": 17\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/activities",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"activities"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/activities",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2IxOWY0NTA5ZTQ5ZDgwNDlhNzY4NzEiLCJpYXQiOjE3Mzk2OTM5MTksImV4cCI6MTczOTc4MDMxOX0.pnxYqJCS5vuGpj7lEquXJdm8q4RsNZM16hWR_d3TbaA"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/activities",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"activities"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/activities/daily?day=17",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2IxOWY0NTA5ZTQ5ZDgwNDlhNzY4NzEiLCJpYXQiOjE3Mzk2OTM5MTksImV4cCI6MTczOTc4MDMxOX0.pnxYqJCS5vuGpj7lEquXJdm8q4RsNZM16hWR_d3TbaA"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/activities/daily?day=17",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"activities",
+						"daily"
+					],
+					"query": [
+						{
+							"key": "day",
+							"value": "17"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/activities/67b19fce09e49d8049a76874/complete",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2IxOWY0NTA5ZTQ5ZDgwNDlhNzY4NzEiLCJpYXQiOjE3Mzk2OTM5MTksImV4cCI6MTczOTc4MDMxOX0.pnxYqJCS5vuGpj7lEquXJdm8q4RsNZM16hWR_d3TbaA"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/activities/67b19fce09e49d8049a76874/complete",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"activities",
+						"67b19fce09e49d8049a76874",
+						"complete"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
